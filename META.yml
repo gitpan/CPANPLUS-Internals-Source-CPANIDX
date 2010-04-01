@@ -1,0 +1,45 @@
+---
+abstract: 'CPANIDX source implementation'
+author:
+  - 'Chris Williams <chris@bingosnet.co.uk>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::More: 0.47
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 0.95'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: CPANPLUS-Internals-Source-CPANIDX
+no_index:
+  directory:
+    - examples
+    - inc
+    - t
+provides:
+  CPANPLUS::Internals::Source::CPANIDX:
+    file: lib/CPANPLUS/Internals/Source/CPANIDX.pm
+    version: 0.01_05
+  CPANPLUS::Internals::Source::CPANIDX::HTTP:
+    file: lib/CPANPLUS/Internals/Source/CPANIDX/HTTP.pm
+    version: 0.01_05
+  CPANPLUS::Internals::Source::CPANIDX::Tie:
+    file: lib/CPANPLUS/Internals/Source/CPANIDX/Tie.pm
+    version: 0.01_05
+requires:
+  CPANPLUS: 0.9001
+  File::Fetch: 0
+  File::Spec: 0
+  Locale::Maketext::Simple: 0
+  Module::Load::Conditional: 0
+  Params::Check: 0
+  Parse::CPAN::Meta: 0
+  perl: 5.6.0
+resources:
+  homepage: http://github.com/bingos/cpanplus-internals-source-cpanidx/tree
+  license: http://dev.perl.org/licenses/
+  repository: git://github.com/bingos/cpanplus-internals-source-cpanidx.git
+version: 0.01_05
