@@ -1,4 +1,9 @@
 package CPANPLUS::Internals::Source::CPANIDX;
+BEGIN {
+  $CPANPLUS::Internals::Source::CPANIDX::VERSION = '0.04';
+}
+
+#ABSTRACT: CPANIDX source implementation
 
 use strict;
 use warnings;
@@ -14,10 +19,6 @@ use Locale::Maketext::Simple    Class => 'CPANPLUS', Style => 'gettext';
 use Module::Load::Conditional   qw[check_install];
 
 use constant CPANIDX => 'http://cpanidx.org/cpanidx/';
-
-use vars qw($VERSION);
-
-$VERSION = '0.02';
 
 {
     my $cpanidx = $ENV{PERL5_CPANIDX_URL} || CPANIDX;
@@ -163,11 +164,17 @@ $VERSION = '0.02';
 
 1;
 
-__END__
 
-=head1 NAME 
+__END__
+=pod
+
+=head1 NAME
 
 CPANPLUS::Internals::Source::CPANIDX - CPANIDX source implementation
+
+=head1 VERSION
+
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -212,22 +219,22 @@ I have included two scripts in the C<examples> directory of this distribution th
 may be of use. C<installer.pl> does installation of modules and C<updater.pl> will
 find out of date modules and prompt to update them.
 
-=head1 AUTHOR
-
-Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
-
-Jos Boumans <kane@cpan.org>
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams and Jos Boumans
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
-
 =head1 SEE ALSO
 
 L<CPANPLUS>
 
 L<CPANPLUS::Internals::Source>
 
+=head1 AUTHOR
+
+Chris Williams <chris@bingosnet.co.uk>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2011 by Chris Williams and Jos Boumans.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+
